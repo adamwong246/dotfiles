@@ -1,0 +1,19 @@
+---
+title: test
+---
+
+{% include header %}
+
+
+" Turn on line number
+:set number
+
+" Turn on syntax highlighting
+:syntax on
+
+" Allow mouse scrolling
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+{% include vim/wordwrap %}
