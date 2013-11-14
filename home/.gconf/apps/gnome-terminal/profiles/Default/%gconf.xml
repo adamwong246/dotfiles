@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="font" mtime="1376367284" type="string">
+		<stringvalue>Monospace 12</stringvalue>
+	</entry>
+	<entry name="use_system_font" mtime="1384404297" type="bool" value="false"/>
+	<entry name="use_theme_colors" mtime="1384404446" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1384403406" type="bool" value="true"/>
+	<entry name="palette" mtime="1384404459" type="string">
+		<stringvalue>#000000000000:#CDCB00000000:#0000CDCB0000:#CDCBCDCB0000:#1E1A908FFFFF:#CDCB0000CDCB:#0000CDCBCDCB:#7373D2D11615:#4CCC4CCC4CCC:#FFFF00000000:#0000FFFF0000:#FFFFFFFF0000:#46458281B4AE:#FFFF0000FFFF:#0000FFFFFFFF:#201F4A4A8787</stringvalue>
+	</entry>
+	<entry name="alternate_screen_scroll" mtime="1384403406" type="bool" value="true"/>
+	<entry name="background_color" mtime="1384404492" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="visible_name" mtime="1384404285" type="string">
+		<stringvalue>shuri-ubuntu-terminal</stringvalue>
+	</entry>
+	<entry name="bold_color" mtime="1384403406" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="foreground_color" mtime="1384404482" type="string">
+		<stringvalue>#72729F9FCFCF</stringvalue>
+	</entry>
+</gconf>
