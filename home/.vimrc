@@ -11,6 +11,9 @@
 " https://github.com/adamwong246/Castle-Shuri                                          
 " Licensed under the GNU GENERAL PUBLIC LICENSE.                                
 
+" Syntax highlighting 
+:syntax on
+
 " Turn on line number
 :set number
 
