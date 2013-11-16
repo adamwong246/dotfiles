@@ -1,6 +1,6 @@
 # This file is part of Castle Shuri, the dotfiles of Adam Wong
 # https://github.com/adamwong246/Castle-Shuri                                          
-# Licensed under the GNU GENERAL PUBLIC LICENSE.                                 
+# Licensed under the GNU GENERAL PUBLIC LICENSE.  
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -47,7 +47,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 export PATH=$PATH:/Users/r625503/.cabal/bin:/Users/r625503/.cabal/bin:/Users/r625503/.cabal/bin:/Users/r625503/.cabal/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/r625503/.cabal/bin:/usr/local/binexport:/usr/local/share/npm/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/binexport:/usr/local/share/npm/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/binexport:/usr/local/share/npm/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/binexport:/usr/local/share/npm/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/r625503/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/r625503/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/binexport:/usr/local/share/npm/bin
 
