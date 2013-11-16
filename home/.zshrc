@@ -51,3 +51,19 @@ export PATH=$HOME/.cabal/bin:$PATH
 
 GOPATH=/usr/local/bin/
 export GOPATH
+
+echo -en "\033[1m"
+
+# greeting
+cat hello.txt
+
+# color test
+# for attr in $(seq 0 1); do
+#   for fg in $(seq 30 37); do
+#     for bg in $(seq 40 47); do
+#       printf "\033[$attr;${bg};${fg}m$attr;$fg;$bg\033[m "
+#     done
+#     echo
+#   done
+# done
+
