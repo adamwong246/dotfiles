@@ -89,7 +89,10 @@ echo "
 
                You are operating with the dotfiles of Adam Wong.
                   https://github.com/adamwong246/Castle-Shuri
-                         adamwong246.github.io"
+                         adamwong246.github.io
+
+"
+
 # color test
 # for attr in $(seq 0 1); do
 #   for fg in $(seq 30 37); do
