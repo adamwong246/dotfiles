@@ -1,6 +1,6 @@
-" This file is part of Castle Shuri, the dotfiles of Adam Wong
-" https://github.com/adamwong246/Castle-Shuri                                          
-" Licensed under the GNU GENERAL PUBLIC LICENSE.    
+# This file is part of Castle Shuri, the dotfiles of Adam Wong
+# https://github.com/adamwong246/Castle-Shuri                                          
+# Licensed under the GNU GENERAL PUBLIC LICENSE.    
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
