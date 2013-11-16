@@ -1,3 +1,7 @@
+# https://github.com/adamwong246/Castle-Shuri
+# Adam Wong
+# Release under the GPL license. 
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
