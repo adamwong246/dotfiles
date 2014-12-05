@@ -1,2 +1,2 @@
 .DS_Store
-.zsh_plugins
+.zsh_plugins/**/*
