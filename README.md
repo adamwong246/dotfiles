@@ -17,8 +17,8 @@ Oh-My-Zsh is a fantastic tool- for newbies. While there's lots of good stuff, it
 2. use the sub-tree split technique to filter the files you want
 https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/
 3. host it one github
-4. modify the install.sh script to include this repo as a subtree within your dotfiles
-5. make sure you gitignore the subtree!
+4. add the split off repo as a submodule. Force if necessary.
+5. make sure you gitignore the submodule!
 6. `sh sh.install`
 7. ....
 8. profit!
