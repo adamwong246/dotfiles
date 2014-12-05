@@ -1,4 +1,8 @@
-[submodule ".zsh_plugins/heck-yeah-zsh-colored-man"]
-	path = .zsh_plugins/heck-yeah-zsh-colored-man
-	url = https://github.com/adamwong246/heck-yeah-zsh-colored-man
+[submodule ".zsh_plugins/colored-man"]
+	path = .zsh_plugins/colored-man
+	url = git@github.com:robbyrussell/oh-my-zsh.git
+	branch = master
+[submodule ".zsh_plugins/brew"]
+	path = .zsh_plugins/brew
+	url = git@github.com:robbyrussell/oh-my-zsh.git
 	branch = master

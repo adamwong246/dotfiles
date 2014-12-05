@@ -13,17 +13,10 @@ To add plugins, modify the install.sh script
 ### borrowing from oh-my-zsh
 Oh-My-Zsh is a fantastic tool- for newbies. While there's lots of good stuff, it's made easier for beginners by including *everything*, whether you need it or not. This is less than optimal. If there's a plugin you want...
 
-1. clone oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
-2. use the sub-tree split technique to filter the files you want
-https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/
-3. host it one github
-4. add the split off repo as a submodule. Force if necessary.
-5. make sure you gitignore the submodule!
-6. `sh sh.install`
-7. ....
-8. profit!
+1. `git submodule add -b master git@github.com:robbyrussell/oh-my-zsh.git <PLUGIN_NAME>`
 
-
+2. 'cd <PLUGIN_NAME>'
+3. 'git filter-branch --prune-empty --subdirectory-filter plugins/<PLUGIN_NAME master'
 
 Thanks to Brandon Invergo http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
 
