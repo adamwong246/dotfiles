@@ -1,4 +1,0 @@
-[submodule ".zsh_plugins/heck-yeah-zsh-colored-man"]
-	path = .zsh_plugins/heck-yeah-zsh-colored-man
-	url = https://github.com/adamwong246/heck-yeah-zsh-colored-man
-	branch = master

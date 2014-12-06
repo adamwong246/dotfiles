@@ -2,8 +2,6 @@
 # https://github.com/adamwong246/Castle-Shuri                                          
 # Licensed under the GNU GENERAL PUBLIC LICENSE.  
 
-. .zsh_plugins/colored-man/colored-man.plugin.zsh
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 echo -en "\033[1m"
