@@ -1,1 +1,3 @@
 .DS_Store
+.cabal/logs
+.cabal/setup-exe-cache

@@ -2,7 +2,10 @@
 # https://github.com/adamwong246/Castle-Shuri                                          
 # Licensed under the GNU GENERAL PUBLIC LICENSE.  
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:/Library/Haskell/bin:"
+
+
+
 
 echo -en "\033[1m"
 echo "       
