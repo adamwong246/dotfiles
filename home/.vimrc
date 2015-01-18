@@ -1,7 +1,3 @@
-" This file is part of Castle Shuri, the dotfiles of Adam Wong
-" https://github.com/adamwong246/Castle-Shuri                                          
-" Licensed under the GNU GENERAL PUBLIC LICENSE.                                
-
 " Syntax highlighting 
 :syntax on
 
