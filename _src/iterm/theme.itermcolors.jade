@@ -1,0 +1,38 @@
+mixin RGB_comp(name, hex)
+ key= name + " Color"
+ dict
+  key Blue Component
+  real= (parseInt(hex, 16) & 255)/255
+  key Green Component
+  real= ((parseInt(hex, 16) >> 8) & 255)/255
+  key Red Component
+  real= ((parseInt(hex, 16) >> 16) & 255)/255
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+plist(version='1.0')
+ dict
+  + RGB_comp("Ansi 0", base03)
+  + RGB_comp("Ansi 1", base02)
+  + RGB_comp("Ansi 2", base01)
+  + RGB_comp("Ansi 3", base00)
+  + RGB_comp("Ansi 4", base0)
+  + RGB_comp("Ansi 5", base1)
+  + RGB_comp("Ansi 6", base2)
+  + RGB_comp("Ansi 7", base3)
+  + RGB_comp("Ansi 8", yellow)
+  + RGB_comp("Ansi 9", orange)
+  + RGB_comp("Ansi 10", red)
+  + RGB_comp("Ansi 11", magenta)
+  + RGB_comp("Ansi 12", violet)
+  + RGB_comp("Ansi 13", blue)
+  + RGB_comp("Ansi 14", cyan)
+  + RGB_comp("Ansi 15", green)
+  + RGB_comp("Background", base03)
+  + RGB_comp("Bold", green)
+  + RGB_comp("Cursor", cyan)
+  + RGB_comp("Cursor Text", blue)
+  + RGB_comp("Foreground", base1)
+  + RGB_comp("Selected Text", base2)
+  + RGB_comp("Selection", base1)
