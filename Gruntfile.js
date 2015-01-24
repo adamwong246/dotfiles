@@ -8,12 +8,22 @@ module.exports = function(grunt) {
           return require ('./_src/colors.json')
         }
       },
-      compile: {
+
+
+      iterm: {
         expand: true,
-        cwd: '_src/iterm',
-        src: ['**/*.jade'],
+        cwd: '_src',
         dest: 'build/',
+        src: 'iterm/theme.itermcolors.jade',
         ext: '.itermcolors'
+      },
+      
+      atom: {
+        expand: true,
+        cwd: '_src',
+        dest: 'build/',
+        src: 'solarized-dark-syntax/styles/variables.less.jade',
+        ext: '.less'
       }
     }
   });
