@@ -13,26 +13,28 @@ mixin RGB_comp(name, hex)
 
 plist(version='1.0')
  dict
-  + RGB_comp("Ansi 0", base0)
-  + RGB_comp("Ansi 1", base1)
-  + RGB_comp("Ansi 2", base1)
-  + RGB_comp("Ansi 3", base0)
-  + RGB_comp("Ansi 4", base0)
-  + RGB_comp("Ansi 5", base1)
-  + RGB_comp("Ansi 6", base2)
-  + RGB_comp("Ansi 7", base03)
-  + RGB_comp("Ansi 8", yellow)
-  + RGB_comp("Ansi 9", orange)
-  + RGB_comp("Ansi 10", red)
-  + RGB_comp("Ansi 11", magenta)
-  + RGB_comp("Ansi 12", violet)
-  + RGB_comp("Ansi 13", blue)
-  + RGB_comp("Ansi 14", cyan)
-  + RGB_comp("Ansi 15", green)
+  + RGB_comp("Ansi 0", base03)   // black
+  + RGB_comp("Ansi 1", red)      // red
+  + RGB_comp("Ansi 2", green)    // green
+  + RGB_comp("Ansi 3", yellow)   // yellow
+  + RGB_comp("Ansi 4", blue)     // blue
+  + RGB_comp("Ansi 5", magenta)  // magenta
+  + RGB_comp("Ansi 6", cyan)     // cyan
+  + RGB_comp("Ansi 7", base3)    // white
+
+  + RGB_comp("Ansi 8", base03)   // bright black
+  + RGB_comp("Ansi 9", red)      // bright red
+  + RGB_comp("Ansi 10", green)   // bright green
+  + RGB_comp("Ansi 11", yellow)  // bright yellow
+  + RGB_comp("Ansi 12", blue)    // bright blue
+  + RGB_comp("Ansi 13", magenta) // bright magenta
+  + RGB_comp("Ansi 14", cyan)    // bright cyan
+  + RGB_comp("Ansi 15", base3)   // bright white
+
   + RGB_comp("Background", base03)
   + RGB_comp("Bold", green)
   + RGB_comp("Cursor", cyan)
   + RGB_comp("Cursor Text", blue)
   + RGB_comp("Foreground", base1)
   + RGB_comp("Selected Text", base2)
-  + RGB_comp("Selection", base1)
+  + RGB_comp("Selection", red)
