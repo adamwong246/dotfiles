@@ -1,5 +1,8 @@
 export PATH="$PATH:$HOME/.rvm/bin:/Library/Haskell/bin:"
 
+autoload -U colors && colors
+PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
+
 echo -en "\033[1m"
 echo "       
                           ███████████████████████                            
