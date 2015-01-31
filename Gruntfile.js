@@ -6,6 +6,11 @@ module.exports = function(grunt) {
         pretty: true,
         data: function(dest, src){
           return require ('./_src/colors.json')
+        },
+        filters: {
+          _: function(block){
+            return block;
+          }
         }
       },
 
@@ -24,6 +29,14 @@ module.exports = function(grunt) {
         dest: 'build/',
         src: 'solarized-dark-syntax/styles/variables.less.jade',
         ext: '.less'
+      },
+
+      user_styles: {
+        expand: true,
+        cwd: '_src',
+        dest: 'build/',
+        src: 'user_styles/solarized-everywhere.css.jade',
+        ext: '.css'
       }
     }
   });
