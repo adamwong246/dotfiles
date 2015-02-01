@@ -6,9 +6,9 @@ scrollbar {opacity: .75 !important;}
 
 /* Base */
 *, ::before, ::after {
-color: #93a1a1 !important;
-border-color: #073642 !important;
-outline-color: #073642 !important;
+color: #C7CCD1 !important;
+border-color: #393F45 !important;
+outline-color: #393F45 !important;
 text-shadow: none !important;
 box-shadow: none !important;
 -moz-box-shadow: none !important;
@@ -31,7 +31,7 @@ background: none !important;
 /* :: Give solid BG :: */
 
 /* element */
-b,i,u,strong{color:#859900}
+b,i,u,strong{color:#AEC795}
 
 
 html,
@@ -68,7 +68,7 @@ div[class*="content"], div[class*="container"],
 /* Popup divs that use visibility: hidden and display: none */
 div[style*="display: block"],
 div[style*="visibility: visible"] {
-background-color: #002b36 !important
+background-color: #1C2023 !important
 }
 
 
@@ -91,23 +91,23 @@ img:hover, svg:hover {opacity: 1 !important;}
 
 /* Highlight */
 ::-moz-selection {
-background-color: #eee8d5 !important;
-color: #586e75 !important;
+background-color: #DFE2E5 !important;
+color: #565E65 !important;
 }
 
 /* ::: anchor/links ::: */
 
 a {
-color: #2aa198 !important;
-background-color: #002b36 !important;
+color: #95C7AE !important;
+background-color: #1C2023 !important;
 opacity: 1 !important;
 text-indent: 0 !important;
 }
 
-a:link         {color: #268bd2 !important;} /* hyperlink */
-a:visited      {color: #6c71c4 !important;}
-a:hover        {color: #b58900 !important; background-color: #073642 !important;}
-a:active       {color: #cb4b16 !important;}
+a:link         {color: #95AEC7 !important;} /* hyperlink */
+a:visited      {color: #AE95C7 !important;}
+a:hover        {color: #C7C795 !important; background-color: #393F45 !important;}
+a:active       {color: #C7AE95 !important;}
 
 /* "Top level" div */
 
@@ -116,9 +116,9 @@ body > div {background-color: inherit !important;}
 /* :::::: Text Presentation :::::: */
 
 summary, details                   {background-color: inherit !important}
-kbd, time, label, .date            {color: #859900 !important}
+kbd, time, label, .date            {color: #AEC795 !important}
 acronym, abbr                      {border-bottom: 1px dotted !important; cursor: help !important;}
-mark,code,pre,samp,blockquote      {background-color: #073642 !important}
+mark,code,pre,samp,blockquote      {background-color: #393F45 !important}
 
 
 /* :::::: Headings :::::: */
@@ -132,25 +132,25 @@ border-radius: 5px !important;
 text-indent: 0 !important;
 }
 
-h1,h2,h3,h4,h5,h6 {background-color: #073642 !important}
+h1,h2,h3,h4,h5,h6 {background-color: #393F45 !important}
 
 
-h1,h2{color:#859900!important}
-h3,h4{color:#b58900!important}
-h5,h6{color:#cb4b16!important}
+h1,h2{color:#AEC795!important}
+h3,h4{color:#C7C795!important}
+h5,h6{color:#C7AE95!important}
 
 /* :::::: Tables, cells :::::: */
 
-table table {background: #073642 !important;}
-th, caption {background: #002b36 !important;}
+table table {background: #393F45 !important;}
+th, caption {background: #1C2023 !important;}
 
 /* ::: Inputs, textareas ::: */
 
 input, textarea, button,
 select,option,optgroup{
 
-color: #586e75 !important;
-background: none #073642 !important;
+color: #565E65 !important;
+background: none #393F45 !important;
 -moz-appearance: none !important;
 -webkit-appearance: none !important;
 }
@@ -158,7 +158,7 @@ background: none #073642 !important;
 input,
 textarea,
 button {
-border-color: #586e75 !important;
+border-color: #565E65 !important;
 border-width: 1px !important;
 }
 
@@ -168,15 +168,15 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button {
-background: #073642 !important;
+background: #393F45 !important;
 }
 
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 button:hover {
-color: #586e75 !important;
-background: #eee8d5 !important;
+color: #565E65 !important;
+background: #DFE2E5 !important;
 }
 
 input[type="image"] {opacity: .85 !important}
@@ -187,7 +187,7 @@ html [id*="lightbox"] * {background-color: transparent !important;}
 html [id*="lightbox"] img {opacity: 1 !important;}
 
 /* Youtube Annotation */
-#movie_player-html5 .annotation {background: #073642 !important}
+#movie_player-html5 .annotation {background: #393F45 !important}
 
 /* Mozilla addons shrink/expand sections */
 .expando a {background: none transparent  !important;}
@@ -198,7 +198,7 @@ html [id*="lightbox"] img {opacity: 1 !important;}
 @-moz-document url(about:newtab) {
 
 window {
-background: #002b36 !important;
+background: #1C2023 !important;
 }
 
 #newtab-scrollbox {
@@ -207,7 +207,7 @@ background: transparent none !important;
 
 .newtab-title {
 background-color: rgba(0,43,54,1) !important;
-color: #93a1a1 !important;
+color: #C7CCD1 !important;
 }
 
 }
@@ -216,7 +216,7 @@ color: #93a1a1 !important;
 
 /* Browser Background */
 browser[type="content-primary"] {
-background-color: #002b36 !important;
+background-color: #1C2023 !important;
 }
 
 }
