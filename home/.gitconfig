@@ -11,8 +11,6 @@
 	email = adamwong246@gmail.com
 [credential]
 	helper = osxkeychain
-[diff]
-	tool = /usr/bin/sdiff
 [color]
 	branch = auto
 	diff = auto
