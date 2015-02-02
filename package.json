@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/adamwong246/dotfiles",
   "dependencies": {
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
     "less": "^1.7.5"
   },
   "devDependencies": {
