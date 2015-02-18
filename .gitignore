@@ -1,4 +1,4 @@
 .DS_Store
-.cabal/logs
-.cabal/setup-exe-cache
+home/.cabal/logs
+home/.cabal/setup-exe-cache
 node_modules
