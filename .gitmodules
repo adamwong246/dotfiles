@@ -1,3 +1,0 @@
-[submodule "build/solarized-dark-syntax"]
-	path = build/solarized-dark-syntax
-	url = git@github.com:atom/solarized-dark-syntax.git
