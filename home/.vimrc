@@ -1,4 +1,4 @@
-" Syntax highlighting 
+" Syntax highlighting
 :syntax on
 
 " Turn on line number
@@ -9,8 +9,12 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
-" Word wrap without line breaks                                                
-" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks                      
+" Word wrap without line breaks
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 :set wrap
 :set linebreak
 :set nolist  " list disables linebreak
+
+" turn off backups. Use git instead!
+set nobackup
+set noswapfile

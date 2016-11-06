@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.rvm/bin:/Library/Haskell/bin:"
+export PATH="$PATH:$HOME/.rvm/bin:/Library/Haskell/bin:/Users/adam/.local/bin"
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}% "
