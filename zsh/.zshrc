@@ -1,4 +1,5 @@
-export PATH="$PATH:$HOME/.rvm/bin:/Library/Haskell/bin:/Users/adam/.local/bin"
+export NVM_DIR="/Users/adam/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}% "
