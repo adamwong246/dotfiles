@@ -1,40 +1,29 @@
 export NVM_DIR="/Users/adam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# turn on colors
 autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}% "
 
-echo -en "\033[1m"
-echo "
-                          ███████████████████████
-                    ███████████████████████████████████
-                    ███████████████████████████████████
-                ██████████████               █████████████
-             █████████████████               █████████████████
-             █████████████                      ██████████████
-          █████████████      ████         ████      █████████████
-          █████████████      ████         ████      █████████████
-          ██████████      ███████         ███████      ██████████
-       █████████████      ███████         ███████      █████████████
-       █████████████      ███████         ███████      █████████████
-       █████████████                                   █████████████
-       ████████████████                             ████████████████
-       ████████████████                             ████████████████
-       ████████████████      ████   ███   ████      ████████████████
-       ████████████████      ████   ███   ████      ████████████████
-       █████████████████████████████████████████████████████████████
-          █████████████░░░████░░░░░░░░░░░░░░░████░░░█████████████
-          █████████████░░░████░░░░░░░░░░░░░░░████░░░█████████████
-             ███████░░░░░░███████░░░░░░░░░███████░░░░░░███████
-             ███████░░░░░░░██████░░░░░░░░░██████░░░░░░░███████
-                ████░░░░░░░░░████░░░░░░░░░████░░░░░░░░░███
-                ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███
-                ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███
-                ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███
-                    ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███
-                    ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███
-                       █████████████████████████████
-                       █████████████████████████████
+# customize the command prompt
+PS1="%{$fg[yellow]%}%~ %{$reset_color%}%"
 
-                   https://github.com/adamwong246/dotfiles
+clear
+
+echo -en "
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m   Greetings \e[7m${USER}\e[0m. Welcome to \e[7m${$(hostname -fs)}\e[0m.$reset_color
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
+\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
+\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
+\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
 "

@@ -1,3 +1,13 @@
+You probably want to unstow stow's own configuration first.
+```
+stow stow
+```
+
+then the bash configs
+```
+stow zsh
+```
+
 Powered by [GNU stow](http://www.gnu.org/software/stow/)
 Thanks to Brandon Invergo http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
 
