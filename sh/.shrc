@@ -1,0 +1,8 @@
+export NVM_DIR="/Users/adam/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias lsl="ls -ApFlhT"
+alias lsc="ls -ApFC"
+
+# turn on colors
+export CLICOLOR=1

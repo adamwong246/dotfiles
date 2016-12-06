@@ -1,11 +1,5 @@
-export NVM_DIR="/Users/adam/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source ~/.shrc
 
-alias lsl="ls -ApFlhT"
-alias lsc="ls -ApFC"
-
-# turn on colors
-export CLICOLOR=1
 autoload -U colors && colors
 
 # customize the command prompt
