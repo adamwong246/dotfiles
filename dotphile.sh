@@ -13,14 +13,14 @@ fi
 
 if [ $# -eq 1 ]; then
    folder=$1
-   echo "stowing ${fi1}${fo1}${folder}${Color_Off}"
-   # stow ${folder}
-   # files="$(find -L "$folder" -type f ! -name '*.DS_Store')"
-   # for file in $files; do
-   #    stippedFile=${file#$folder}
-   #    echo ~/${PWD##*/}/${file} ~${stippedFile}
-   #    sudo ln -s ~/${PWD##*/}/${file} ~${stippedFile}
-   # done
+   echo "stowing ${folder}"
+   stow ${folder}
+   files="$(find -L "$folder" -type f ! -name '*.DS_Store')"
+   for file in $files; do
+      stippedFile=${file#$folder}
+      echo "symlinking ${HOME}${stippedFile} -> ~/${PWD##*/}/${file}"
+      ln -s ~/${PWD##*/}/${file} ${HOME}${stippedFile}
+   done
 fi
 
 if [ $# -eq 2 ]; then

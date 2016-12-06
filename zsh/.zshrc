@@ -1,14 +1,17 @@
 export NVM_DIR="/Users/adam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+alias lsl="ls -ApFlhT"
+alias lsc="ls -ApFC"
+
 # turn on colors
+export CLICOLOR=1
 autoload -U colors && colors
 
 # customize the command prompt
 PS1="%{$fg[yellow]%}%~ %{$reset_color%}%"
 
 clear
-
 echo -en "
 \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
 \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m  Ye elves of hills, brooks, standing lakes, and groves,
