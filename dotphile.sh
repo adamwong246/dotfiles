@@ -2,13 +2,14 @@
 # a really simple dotfile manager
 
 if [ $# -eq 0 ]; then
+  echo "usage example:"
+  echo "dotphile.sh <pile>            symlinks a whole dotpile into HOME"
+  echo
+  echo "dotphile.sh <pile> <file>     adds a dotfile to a dotpile,"
+  echo "                              prompts the user to git-commit changes"
+  echo "                              and finally symlinks the file into HOME"
   echo "dotfile: configuration file in the user's HOME dir"
   echo "dotpile: collection of dotfiles, mirroring their position relative the the HOME dir"
-  echo "Usage:"
-  echo "sh dotphile.sh <pile>            symlinks a whole dotpile into HOME"
-  echo "sh dotphile.sh <pile> <file>     adds a dotfile to a dotpile,"
-  echo "                                 prompts the user to git-commit changes"
-  echo "                                 and finally symlinks the file into HOME"
 fi
 
 if [ $# -eq 1 ]; then
@@ -26,36 +27,35 @@ if [ $# -eq 1 ]; then
       if [ $readlink = "$seed" ]; then
         echo "${base} ✓"
       else
-        echo "base: ${base}"
-        echo "seed: ${seed}"
-        echo "target: ${target}"
-        echo "readlink: ${readlink}"
         echo "${base} ✗ ${seed} is symlinked to $(readlink $target), which is not managed by dotphile."
         echo "a) add $(readlink $target) to ${pile} as ${seed},"
         echo "   git-commit the changes made to ${base},"
-        echo "   and finally forcibly symlink ${file} to ${target}"
+        echo "   and finally overwriting ${base} by forcibly symlinking ${file} to ${target}"
         echo "b) overwrite ${base} by forcibly symlinking ${file} to ${target}"
         echo "c) do nothing"
-        # TODO:
-        # read -r -p "What to do? [y/N]" response
-        # case $response in
-        #   [yY][eE][sS]|[yY])
-        #     true
-        #     ;;
-        #   *)
-        #     false
-        #     ;;
-        # esac
+
+        read -r -p "What to do? [a/b/*]" response
+        case $response in
+          [a]) sh dotphile.sh $pile $target ;;
+          [b]) ln -svf ~/${PWD##*/}/${file} ${target} ;;
+          *) echo "something else" ;;
+        esac
 
       fi
     elif [ -e ${target} ] ; then # file is not a symlink?
       echo "${target} already exists"
       echo "a) add $target to ${pile} as ${seed},"
       echo "   git-commit the changes made to ${base},"
-      echo "   and finally forcibly symlink ${file} to ${target}"
+      echo "   and finally overwriting ${base} by forcibly symlinking ${file} to ${target}"
       echo "b) overwrite ${base} by forcibly symlinking ${file} to ${target}"
-      echo "c) do nothing"
-      # TODO:
+      echo "else do nothing"
+
+      read -r -p "What to do? [a/b/*]" response
+      case $response in
+        [a]) sh dotphile.sh $pile $target ;;
+        [b]) ln -svf ~/${PWD##*/}/${file} ${target} ;;
+        *) echo "something else" ;;
+      esac
 
     else # file is missing!
       echo "${target} doesn't exist. Symlinking ${target} to ${seed}"
