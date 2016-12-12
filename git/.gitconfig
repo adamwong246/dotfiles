@@ -25,9 +25,9 @@
 	old = red
 	new = cyan
 	[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+	added = green
+	changed = yellow
+	untracked = red
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
