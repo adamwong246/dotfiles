@@ -1,11 +1,16 @@
 export NVM_DIR="/Users/adam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 # turn on colors
 autoload -U colors && colors
 
 # customize the command prompt
 PS1="%{$fg[yellow]%}%~ %{$reset_color%}%"
+
+# https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Zsh
+autoload -Uz compinit && compinit
 
 clear
 
