@@ -15,7 +15,7 @@ autoload -U colors && colors
 
 # customize the command prompt
 PROMPT="
-%{$fg[red]%}%   (╯°益°)╯%{$reset_color%}  "
+%{$fg[red]%}% (╯°益°)╯%{$reset_color%}  "
 
 clear
 
@@ -78,7 +78,7 @@ git_prompt_string() {
 }
 
 # Set the right-hand prompt
-RPS1=' %~$(git_prompt_string)'
+RPROMPT='%~$(git_prompt_string)%{$reset_color%}'
 
 clear
 echo "
@@ -90,11 +90,13 @@ echo "
  \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
  \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
  \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
- \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m            $fg[red]\" I fight for the Users \" $reset_color
+ \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[34m█\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
  \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m▒\e[0m\e[35m▒\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
  \e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m
  \e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[35m░\e[0m\e[35m░\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m▒\e[0m\e[37m█\e[0m\e[37m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
- \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m$reset_color"
+ \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m$reset_color
+
+       $fg[red]I fight for the Users$reset_color"
