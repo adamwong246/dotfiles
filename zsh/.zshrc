@@ -15,7 +15,8 @@ autoload -U colors && colors
 
 # customize the command prompt
 PROMPT="
-%{$fg[red]%}% (╯°益°)╯%{$reset_color%}  "
+%{$bg[red]%}\
+%{$fg[black]%}(╯°益°)╯%{$reset_color%} "
 
 clear
 
@@ -79,6 +80,8 @@ git_prompt_string() {
 
 # Set the right-hand prompt
 RPROMPT='%~$(git_prompt_string)%{$reset_color%}'
+
+dotfilesDir = "https://github.com/adamwong246/dotfiles"
 
 clear
 echo " \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[30m█\e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
