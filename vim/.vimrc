@@ -18,3 +18,12 @@ map <ScrollWheelDown> <C-E>
 " turn off backups. Use git instead!
 set nobackup
 set noswapfile
+
+" show filename
+set laststatus=2
+
+" auto reload vimrc
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END

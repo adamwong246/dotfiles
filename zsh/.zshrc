@@ -20,8 +20,8 @@ PROMPT="
 clear
 
 # Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_AHEAD=" %{$fg[green]%}NUM>>%{$reset_color%} "
-GIT_PROMPT_BEHIND=" %{$fg[cyan]%<<NUM%{$reset_color%} "
+#GIT_PROMPT_AHEAD="%{$fg[red]%}NUM>%{$reset_color%}"
+#GIT_PROMPT_BEHIND="%{$fg[cyan]%}NUM<%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg[magenta]%}⚡︎%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[red]%}●%{$reset_color%}"
 GIT_PROMPT_MODIFIED="%{$fg[yellow]%}●%{$reset_color%}"
@@ -38,15 +38,15 @@ parse_git_state() {
   # Compose this value via multiple conditional appends.
   local GIT_STATE=""
 
-  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_AHEAD" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
-  fi
-
-  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_BEHIND" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
-  fi
+  #local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+  #if [ "$NUM_AHEAD" -gt 0 ]; then
+  #  GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+  #fi
+  #
+  #local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+  #if [ "$NUM_BEHIND" -gt 0 ]; then
+  #  GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+  #fi
 
   local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
   if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
@@ -74,7 +74,7 @@ parse_git_state() {
 # If inside a Git repository, print its branch and state
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo ":%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
+  [ -n "$git_where" ] && echo " %{$fg[yellow]%}${git_where#(refs/heads/|tags/)} $(parse_git_state)"
 }
 
 # Set the right-hand prompt
@@ -99,5 +99,7 @@ echo "
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m$reset_color
 
-       I fight for the Users$reset_color
+ don't forget to backup your dotfiles!
 "
+
+cd ~/dotfiles; git diff --stat; cd
