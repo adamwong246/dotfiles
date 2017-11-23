@@ -102,4 +102,6 @@ echo "
  don't forget to backup your dotfiles!
 "
 
-cd ~/dotfiles; git diff --stat; cd
+cd ~/dotfiles; 
+if [[ -n $(git status --porcelain) ]]; then echo "don't forget to backup your dotfiles"; git diff --stat; fi
+cd
