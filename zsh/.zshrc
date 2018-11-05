@@ -13,11 +13,18 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # turn on colors
 autoload -U colors && colors
 
+#HAPPY="(づ◕‿◕)づ"
+#SAD="[╯°益°]╯"
+HAPPY=" ʘ‿ʘ "
+SAD=" ಠ_ಠ "
+
+#echo $HAPPY $SAD
+
 # customize the command prompt
 PROMPT='
- %(?. %{$fg[black]%}%{$bg[green]%}づ◕‿◕づ%{$reset_color%} . %{$fg[black]%}%{$bg[red]%}╯°益°╯%{$reset_color%} ) '
+ %(?. %{$fg[black]%}%{$bg[green]%}$HAPPY%{$reset_color%} . %{$fg[black]%}%{$bg[red]%}$SAD%{$reset_color%} ) '
 
-clear
+# clear
 
 # Modify the colors and symbols in these variables as desired.
 #GIT_PROMPT_AHEAD="%{$fg[red]%}NUM>%{$reset_color%}"
@@ -74,38 +81,38 @@ parse_git_state() {
 # If inside a Git repository, print its branch and state
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo " %{$fg[yellow]%}${git_where#(refs/heads/|tags/)} $(parse_git_state)"
+  [ -n "$git_where" ] && echo " %{$fg[blue]%}${git_where#(refs/heads/|tags/)} $(parse_git_state)"
 }
 
 # Set the right-hand prompt
 RPROMPT='%~$(git_prompt_string)%{$reset_color%}'
 
 clear
+
 echo "
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m
- \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m        $fg[red]${USER}$reset_color$fg[white]@$fg[green]${$(hostname -fs)}$reset_color
+ \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m       $fg[red]${USER}$reset_color$fg[white] @ $fg[green]${$(hostname -fs)}$reset_color
  \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m
- \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m        $fg[red]OS$reset_color       $fg[green]${$(uname -sm)}$reset_color
- \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m        $fg[red]shell$reset_color    $fg[green]$(echo $SHELL)$reset_color
- \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m        $fg[red]dotfiles$fg[green] github.com/adamwong246/dotfiles$reset_color
+ \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m       $fg[red]OS$reset_color       $fg[green]${$(uname -sm)}$reset_color
+ \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m       $fg[red]shell$reset_color    $fg[green]$(echo $SHELL)$reset_color
+ \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[44m \e[0m\e[44m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m       $fg[red]dotfiles$fg[green] github.com/adamwong246/dotfiles$reset_color
  \e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[45m \e[0m\e[45m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[47m \e[0m\e[47m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[47m \e[0m\e[47m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[43m \e[0m\e[43m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[47m \e[0m\e[43m \e[0m\e[43m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m$reset_color
-
-       $fg[red]$bg[black]I fight for the Users$reset_color
-
 "
 
 cd ~/dotfiles; 
-if [[ -n $(git status --porcelain) ]]; then echo " $fg[white]$bg[black]don't forget to backup your dotfiles!$reset_color\n"; git diff --stat; fi
+if [[ -n $(git status --porcelain) ]]; then echo " $fg[white]$bg[black]You have uncommitted changes to your dotfiles$reset_color"; git diff --stat; fi
 cd
 
 #bg[red]     $bg[green]     $bg[blue]     $bg[cyan]     $bg[magenta]     $bg[yellow]     $bg[black]$fg[white]█████$bg[white]$fg[black]█████$reset_color
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

@@ -5,6 +5,16 @@ export NVM_DIR="$HOME/.nvm"
 alias lsl="ls -ApFlhT"
 alias lsc="ls -ApFC"
 
+function lsg(){
+  ls -A1 | grep $1
+}
+
+function gitattributeSTageUnstage(){
+  git rm .gitattributes
+  git reset HEAD .gitattributes
+  git checkout -- .gitattributes
+}
+
 # turn on colors
 export CLICOLOR=1
 
