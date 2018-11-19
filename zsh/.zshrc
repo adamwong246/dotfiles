@@ -13,10 +13,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # turn on colors
 autoload -U colors && colors
 
-#HAPPY="(づ◕‿◕)づ"
-#SAD="[╯°益°]╯"
-HAPPY=" ʘ‿ʘ "
-SAD=" ಠ_ಠ "
+HAPPY=" ? "
+SAD=" ! "
+#HAPPY=" ʘ‿ʘ "
+#SAD=" ಠ_ಠ "
 
 #echo $HAPPY $SAD
 
@@ -29,10 +29,10 @@ PROMPT='
 # Modify the colors and symbols in these variables as desired.
 #GIT_PROMPT_AHEAD="%{$fg[red]%}NUM>%{$reset_color%}"
 #GIT_PROMPT_BEHIND="%{$fg[cyan]%}NUM<%{$reset_color%}"
-GIT_PROMPT_MERGING="%{$fg[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[red]%}●%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}●%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}●%{$reset_color%}"
+GIT_PROMPT_MERGING="%{$bg[magenta]$fg[black]%}|%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$bg[red]$fg[black]%}-%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$bg[yellow]$fg[black]%}!%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$bg[green]$fg[black]%}+%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 parse_git_branch() {
