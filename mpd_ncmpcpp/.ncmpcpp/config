@@ -11,4 +11,4 @@ visualizer_type = "spectrum"
 visualizer_look = "OO"
 
 visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "1"
+#visualizer_sync_interval = "1"
