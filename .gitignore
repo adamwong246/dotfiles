@@ -1,1 +1,4 @@
+*.swp
+mpd_ncmpcpp/.mpd/**
+!mpd_ncmpcpp/.mpd/mpd.conf
 .DS_Store
