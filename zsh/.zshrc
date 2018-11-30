@@ -2,16 +2,61 @@
 ## git functions: https://gist.github.com/1712320
 
 source ~/.shrc
+source ~/auto-nvm.zsh
+
+# turn on colors
+autoload -U colors && colors
+
+# compdef _gnu_generic gcc
+
+##
+# Completion
+##
+autoload -U compinit
+compinit
+zmodload -i zsh/complist        
+setopt hash_list_all            # hash everything before completion
+setopt completealiases          # complete alisases
+setopt always_to_end            # when completing from the middle of a word, move the cursor to the end of the word    
+setopt complete_in_word         # allow completion from within a word/phrase
+
+setopt list_ambiguous           # complete as much of a completion until it gets ambiguous.
+
+zstyle ':completion:*:*:*:*:*' menu select # select completions with arrow keys
+
+#zstyle ':completion:*:manuals'    separate-sections true
+#zstyle ':completion:*:manuals.*'  insert-sections   true
+#zstyle ':completion:*:man:*'      menu yes select
+
+# Group matches and describe.
+#zstyle ':completion:*:matches' group 'yes'
+#zstyle ':completion:*:options' description 'yes'
+#zstyle ':completion:*:options' auto-description '%d'
+#zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+#zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+#zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+#zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+#zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' list-colors '' # colorize completion-ed files
+
+setopt auto_cd # cd by typing directory name if its not a command
+
+# leave this off, they are annoying
+#setopt correct_all # autocorrect commands
+#setopt correct                  # spelling correction for commands
+
+setopt auto_list # automatically list choices on ambiguous completion
+setopt auto_menu # automatically use menu completion
+setopt always_to_end # move cursor to end if word had one match
 
 setopt prompt_subst
 
 # https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Zsh
-autoload -Uz compinit && compinit
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# turn on colors
-autoload -U colors && colors
 
 #HAPPY="(づ◕‿◕)づ"
 #SAD="[╯°益°]╯"
@@ -23,8 +68,6 @@ SAD=" ಠ_ಠ "
 # customize the command prompt
 PROMPT='
  %(?. %{$fg[black]%}%{$bg[green]%}$HAPPY%{$reset_color%} . %{$fg[black]%}%{$bg[red]%}$SAD%{$reset_color%} ) '
-
-# clear
 
 # Modify the colors and symbols in these variables as desired.
 #GIT_PROMPT_AHEAD="%{$fg[red]%}NUM>%{$reset_color%}"
@@ -87,7 +130,6 @@ git_prompt_string() {
 # Set the right-hand prompt
 RPROMPT='%~$(git_prompt_string)%{$reset_color%}'
 
-clear
 
 echo "
  \e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[48;5;0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m\e[0m \e[0m

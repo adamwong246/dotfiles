@@ -9,6 +9,9 @@ function lsg(){
   ls -A1 | grep $1
 }
 
+# https://debian-administration.org/article/460/grep_highlighting_matches_in_color
+export GREP_OPTIONS='--color=auto'
+
 function gitattributeSTageUnstage(){
   git rm .gitattributes
   git reset HEAD .gitattributes
