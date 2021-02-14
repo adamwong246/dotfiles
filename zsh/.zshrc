@@ -3,6 +3,8 @@
 
 source ~/.shrc
 
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+
 setopt prompt_subst
 
 # https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Zsh
