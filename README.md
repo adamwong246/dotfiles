@@ -1,3 +1,7 @@
+## essential depedencies
+- git
+- stow (brew install stow)
+
 ```
 cd ~
 git clone https://github.com/adamwong246/dotfiles.git
