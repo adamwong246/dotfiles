@@ -15,9 +15,17 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # turn on colors
 autoload -U colors && colors
 
-# customize the command prompt
-PROMPT="
- %{$fg[red]%}(╯°益°)╯%{$reset_color%}  "
+PROMPT="%(?.
+ {-^ω^}-  .
+ {╯°益°}╯ "
+
+#iif [[ $? -ne 0 ]]; then
+#  PROMPT="
+#  v%{$fg[red]%}(╯°益°)╯%{$reset_color%}  "
+#else 
+#  PROMPT="
+#  %{$fg[blue]%}  (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ %{$reset_color%}  "
+#fi
 
 clear
 

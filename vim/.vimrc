@@ -27,3 +27,5 @@ augroup myvimrchooks
     au!
     autocmd bufwritepost .vimrc source ~/.vimrc
 augroup END
+
+execute pathogen#infect()
