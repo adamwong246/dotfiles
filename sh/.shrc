@@ -21,4 +21,6 @@ export CLICOLOR=1
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
-eval "$(rbenv init -)"
+function ytRip(){
+  youtube-dl -f$(youtube-dl -F $1 |  grep "m4a" |  tail -1 | cut -d" " -f1) $1
+}

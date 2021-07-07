@@ -11,4 +11,10 @@ visualizer_type = "spectrum"
 visualizer_look = "OO"
 
 visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "1"
+visualizer_sync_interval = 30
+visualizer_in_stereo = yes
+
+current_item_inactive_column_prefix = $(red_black)
+current_item_inactive_column_suffix = $(end)
+current_item_prefix = $(white_red)
+current_item_suffix = $(end)
