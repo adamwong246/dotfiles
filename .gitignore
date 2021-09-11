@@ -1,4 +1,5 @@
 *.swp
+mpd_ncmpcpp/.ncmpcpp/error.log
 mpd_ncmpcpp/.mpd/**
 !mpd_ncmpcpp/.mpd/mpd.conf
 .DS_Store
