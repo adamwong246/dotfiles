@@ -1,6 +1,6 @@
 export NVM_DIR="$HOME/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
-# source ~/.nvm/nvm.sh
+source ~/.nvm/nvm.sh
 
 alias lsl="ls -ApFlhT"
 alias lsc="ls -ApFC"
@@ -24,3 +24,7 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 function ytRip(){
   youtube-dl -f$(youtube-dl -F $1 |  grep "m4a" |  tail -1 | cut -d" " -f1) $1
 }
+
+alias ssh-chroma-dev='ssh -v -o ServerAliveInterval=60 ubuntu@adam.chroma.io'
+
+export ANDROID_SDK_ROOT=/Users/adam/Library/Android/sdk
