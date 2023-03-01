@@ -9,6 +9,7 @@
 [user]
 	name = adam wong
 	email = adamwong246@gmail.com
+	password = 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
 [credential]
 	helper = osxkeychain
 [color]
@@ -33,3 +34,5 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+[url "https://github"]
+	insteadOf = git://github
