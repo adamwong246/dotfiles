@@ -25,6 +25,9 @@ function ytRip(){
   youtube-dl -f$(youtube-dl -F $1 |  grep "m4a" |  tail -1 | cut -d" " -f1) $1
 }
 
-alias ssh-chroma-dev='ssh -v -o ServerAliveInterval=60 ubuntu@adam.chroma.io'
+alias ssh-chroma-dev="ssh -v -o ServerAliveInterval=60 ubuntu@adam.chroma.io -t 'tmux a -t 0' "
 
 export ANDROID_SDK_ROOT=/Users/adam/Library/Android/sdk
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+
+export PATH=$PATH:/opt/local/bin

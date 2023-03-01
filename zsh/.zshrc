@@ -111,7 +111,7 @@ echo "
 "
 
 cd ~/dotfiles; 
-if [[ -n $(git status --porcelain) ]]; then echo " $fg[white]You have uncommitted changes to your dotfiles$reset_color"; git diff --stat; fi
+if [[ -n $(git status --porcelain) ]]; then echo " You have uncommitted changes to your dotfiles$reset_color"; git diff --stat; fi
 cd
 
 #bg[red]     $bg[green]     $bg[blue]     $bg[cyan]     $bg[magenta]     $bg[yellow]     $bg[black]$fg[white]█████$bg[white]$fg[black]█████$reset_color
