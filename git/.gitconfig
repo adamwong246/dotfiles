@@ -36,3 +36,5 @@
 	process = git-lfs filter-process
 [url "https://github"]
 	insteadOf = git://github
+[credentials]
+	helper = osxkeychain
