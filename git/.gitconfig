@@ -37,3 +37,5 @@
 	insteadOf = git://github
 [credentials]
 	helper = osxkeychain
+[pull]
+	rebase = true

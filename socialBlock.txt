@@ -1,0 +1,16 @@
+# https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/wildcard/social.txt
+# Title: HaGeZi's Social Networks DNS Blocklist
+# Description: Blocks access to social networks (Facebook, Instagram, TikTok, X (formerly Twitter), Snapchat, ...)
+# Homepage: https://github.com/hagezi/dns-blocklists
+# License: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Issues: https://github.com/hagezi/dns-blocklists/issues
+# Disclaimer: https://github.com/hagezi/dns-blocklists/blob/main/README.md#disclaimer
+# Expires: 1 day
+# Last modified: 14 Nov 2025 17:56 UTC
+# Version: 2025.1114.1756.22
+# Syntax: Domains Wildcard (without subdomains)
+# Number of entries: 884
+#
+*.2ch.org
+*.4cdn.org
+*.4chan.org

@@ -118,3 +118,13 @@ cd
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/adam/Code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adam/Code/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/adam/Code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adam/Code/google-cloud-sdk/completion.zsh.inc'; fi
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"

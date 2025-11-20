@@ -1,4 +1,4 @@
-## essential depedencies
+## dependencies
 - git
 - stow (brew install stow)
 

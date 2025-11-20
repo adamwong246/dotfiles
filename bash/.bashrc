@@ -1,4 +1,4 @@
-PATH=/Applications/Postgres.app/Contents/Versions/9.6/bin/psql:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/Users/adam/.nvm/versions/node/v16.9.1/bin/node/$PATH
+PATH=/Applications/Postgres.app/Contents/Versions/9.6/bin/psql:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/Users/adam/.nvm/versions/node/v16.9.1/bin/node/$PATH:/Users/$HOME/.cargo/bin/cargo:/opt/homebrew/opt/ruby@3.1/bin
 
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
