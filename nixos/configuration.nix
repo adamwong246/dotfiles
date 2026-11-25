@@ -148,7 +148,7 @@
   services.blueman.enable = true;
 
   environment.systemPackages = with pkgs; [
-    tree stow bun vim vscode aider-chat git nodejs yarn-berry
+     zsh ncmpcpp tmux tree stow bun vim vscode aider-chat git nodejs yarn-berry 
   ];
 
   virtualisation.docker.enable = true;
