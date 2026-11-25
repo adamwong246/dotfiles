@@ -1,13 +1,31 @@
+# My dotfiles
+
+## features
+- A means of managing common linux configs with git and stow
+- A means of managing a etc/hosts file. This cannot be accomplished with stow and must be done manually. I use this to block platforms of which I refuse to participate.
+
 ## dependencies
 - git
-- stow (brew install stow)
+- stow
 
-```
+## example usage
+
+```sh
+
+# getting started
 cd ~
 git clone https://github.com/adamwong246/dotfiles.git
 cd dotfiles/
-stow --adopt ...
-git add ...
+git checkout -b this-machines-branch
+
+# Add files to stow
+stow --adopt bash
+
+# Apply stowed files to this machine
+stow zsh
+
+# commit your changes
+git add --all
 git commit
 ```
 
